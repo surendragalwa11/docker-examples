@@ -25,26 +25,68 @@ docker logs <CONTAINER_ID>
 docker logs -f <CONTAINER_ID>
 ```
 
-5. Delete a Container
+5. Delete/Remove a Container
 
 ```
-Docker rm <CONTAINER_ID>
+docker rm <CONTAINER_ID>
 ```
 
 6. Delete a Container Forcefully
 
 ```
-Docker rm -f <CONTAINER_ID>
+docker rm -f <CONTAINER_ID>
 ```
 
 7. Delete All Stopped Containers
 
 ```
-Docker container prune
+docker container prune
 ```
 
-8. Access  Running Conatiner
+8. Access Running Container
 
 ```
-Docker exec -it <CONTAINER_ID> /bin/bash
+docker exec -it <CONTAINER_ID> /bin/bash
+```
+
+9. Stop Running Container
+
+```
+docker stop <CONTAINER_ID>
+```
+
+10. Link Containers
+
+```
+docker run -it --link <CONTAINER_TO_BE_LINKED_ID> <THIS_CONTAINER_ID> /bin/bash
+```
+
+11. Pass Environment Variable to Container
+
+```
+docker run -d -e <VAR_NAME>=<VAR_VALUE>
+```
+
+12. Stop all running Containers
+
+```
+docker stop $(docker ps -q)
+```
+
+13. Remove All Containers
+
+```
+docker rm $(docker ps -a -q)
+```
+
+14. Inspeact a Container
+
+```
+docker inspect <CONTAINER_ID>
+```
+
+15. Restart a Container
+
+```
+docker restart <CONTAINER_ID>
 ```
