@@ -44,7 +44,7 @@ docker volume inspect <VOLUME_ID>
 
 8. Build a Docker Image & Use it in Docker Compose
 
-    Use `build` flag and pass it the path of dockerfile. It will automatically build your service's docker image.
+Use `build` flag and pass it the path of dockerfile. It will automatically build your service's docker image.
 
 9. Rebuild all service images before starting docker-compose:
 

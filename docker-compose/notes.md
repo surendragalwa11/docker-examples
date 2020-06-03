@@ -4,9 +4,9 @@
 
 1. Create a `variables.sh` file with variables and run below command
 
-```
-source variables.sh
-```
+    ```
+    source variables.sh
+    ```
 
     Now all of the variables can be accessed using `${VAR_NAME}` in your compose file.
 
@@ -24,10 +24,10 @@ source variables.sh
 
 4. Environment Variable:
 
-    Don not use whitespaces in services's `environmet` section while defining environment variables.
+    Do not use whitespaces in services's `environmet` section while defining environment variables.
 
 5. Stop a running Docker Compose Conatiners
 
-```
-docker-compose down
-```
+    ```
+    docker-compose down
+    ```

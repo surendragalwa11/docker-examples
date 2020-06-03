@@ -17,7 +17,11 @@ services:
     networks: 
       - backend
     volumes: 
+      - ${MONGO_AUTH_SCRIPT}:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      - ${MONGO_CONF_FILE}:/etc/mongod.conf.orig
       - ${HOST_MONGO_DB_DATA_DIR}:/data/db
+    # command: mongod --config /etc/mongod.conf.orig
+    # command: ["mongod", "-f", "/etc/mongod.conf"]
     environment:
       - MONGO_INITDB_DATABASE:${MONGO_INITDB_DATABASE}
       - MONGO_INITDB_ROOT_USERNAME:${MONGO_INITDB_ROOT_USERNAME}
