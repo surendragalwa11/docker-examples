@@ -42,3 +42,9 @@ docker run -it -p <HOST_PORT>:<CONTAINER_PORT> <IMAGE_ID> /bin/bash
 ```
 docker run -it --rm -p <HOST_PORT>:<CONTAINER_PORT> <IMAGE_ID> /bin/bash
 ```
+
+8. Tag an Image
+
+```
+docker tag <SOURCE_IMAGE>:<SOURCE_IMAGE_TAG> <TARGET_IMAGE>:<TARGET_IMAGE_TAG>
+```
