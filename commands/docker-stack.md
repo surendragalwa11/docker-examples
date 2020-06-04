@@ -17,7 +17,7 @@ docker stack ls
 3. List the tasks in the stack
 
 ```
-docker stack ps	
+docker stack ps	<STACK_NAME>
 ```
 
 4. Remove one or more stacks
@@ -36,4 +36,6 @@ docker stack services
 
 ```
 docker stack deploy --compose-file <COMPOSE_FILE_NAME> <STACK_NAME>
+
+docker stack deploy --c <COMPOSE_FILE_NAME> <STACK_NAME>
 ```
