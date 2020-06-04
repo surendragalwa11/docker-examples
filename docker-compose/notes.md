@@ -31,3 +31,9 @@
     ```
     docker-compose down
     ```
+
+6. Note `.env` variables can be accessed as variables in `docker-compose` via `${VarName}` but cannot be used in docker swarm 
+
+```
+https://docs.docker.com/compose/compose-file/#variable-substitution
+```
