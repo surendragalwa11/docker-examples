@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+    options {
+        buildDiscarder(logRotator(numToKeppStr: '5'))
+    }
+
+    stages{
+        stage('Docker Build') {
+            steps{
+                sh "docker -v"
+                sh "whoami"
+                sh "docker ps"
+            }
+        }
+    }
+
+    post {
+        always {
+            sh 'echo "It will always run"'
+        }
+    }
+}
